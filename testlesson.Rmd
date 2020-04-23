@@ -1,0 +1,60 @@
+---
+title: "lesson 1"
+subtitle: "test_ggplot"
+author: "your name"
+date: "24/04/2020"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+  
+## Analysis
+  
+Let's take a look at the voting history of countries in the United Nations General Assembly. We will be using data from the __cars__ package. Additionally, we will make use of the __tidyverse__ packages for the analysis.
+
+```{r load-packages, warning=FALSE, message=FALSE}
+library(tidyverse)
+data("mtcars")
+```
+
+# Viewing
+
+lets first have a look at the data.
+
+```{r}
+head(mtcars)
+```
+
+## challenge 1
+
+what other methods or function can we use to inspect our data
+
+```{r viewdata}
+# insert a function here, eg str(), tail(), View(), dim()
+```
+
+write a note **here** about what you see
+
+
+# Plotting
+
+plotting our data
+```{r plot}
+mtcars %>% ggplot(., aes(x = cyl, y = mpg)) +
+  geom_point()
+```
+
+not such a great plot for the data
+
+## challenge 2
+
+use a more appropriate geom for the data. Hint, scroll through the prompts that come up when first typing geom
+
+```{r bettergeom}
+mtcars %>% ggplot(., aes(x = factor(cyl), y = mpg)) +
+  #your geom here
+  geom_boxplot()
+```
+
+
