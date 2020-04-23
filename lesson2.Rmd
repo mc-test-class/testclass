@@ -1,0 +1,19 @@
+---
+title: "lesson 2"
+subtitle: "test_manipulation"
+author: "your name"
+date: "24/04/2020"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r load-packages, warning=FALSE, message=FALSE}
+library(tidyverse)
+data("mtcars")
+```
+
+# tidyverse
+do some manipulation and reshaping each lesson a single type eg pivot wider is one .rmd
+
